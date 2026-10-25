@@ -1,0 +1,30 @@
+# Build outputs
+/target/
+**/target/
+/dist/
+
+# Regenerable native dependency tree (see scripts/build-codec-deps.sh)
+/vendor/vcpkg/
+/build/
+/tools/
+/src/
+
+# Downloaded sources & archives (aom, libvpx, libyuv, opus, nasm, cmake)
+*.tar.gz
+*.zip
+
+# Server runtime state and keys (NEVER commit)
+/run/
+
+# Reverse-engineering evidence and local analysis
+/artifacts/
+
+# Logs and local scratch
+*.log
+/tmp/
+
+# macOS
+.DS_Store
+
+# Freebuff workspace marker
+.freebuff/

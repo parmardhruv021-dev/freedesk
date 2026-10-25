@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FreeDesk — Free, open-source remote desktop</title>
+<meta name="description" content="FreeDesk is a free, open-source remote desktop tool. Unlimited sessions, self-hosted, end-to-end encrypted. An affordable alternative to paid remote support tools.">
+<meta property="og:title" content="FreeDesk — Free, open-source remote desktop">
+<meta property="og:description" content="Unlimited sessions. Self-hosted. End-to-end encrypted. No subscriptions, no per-seat fees.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --bg:#0b1020; --bg2:#111834; --card:#151d3d; --line:#263156;
+    --txt:#e8ecfb; --muted:#9aa5c9; --accent:#5b8cff; --accent2:#41e0b0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+  nav .brand{font-weight:800;font-size:20px;color:var(--txt);letter-spacing:.3px}
+  nav .brand span{color:var(--accent)}
+  nav .links a{color:var(--muted);margin-left:22px;font-size:15px}
+  nav .links a:hover{color:var(--txt);text-decoration:none}
+  header{padding:88px 0 72px;text-align:center;
+    background:radial-gradient(1000px 400px at 50% -10%,rgba(91,140,255,.25),transparent)}
+  h1{font-size:clamp(34px,6vw,58px);line-height:1.12;font-weight:850;letter-spacing:-1px}
+  h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{max-width:680px;margin:22px auto 0;font-size:clamp(16px,2.2vw,19px);color:var(--muted)}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+  .btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:650;font-size:16px;
+    border:1px solid transparent;transition:transform .06s ease}
+  .btn:active{transform:translateY(1px)}
+  .btn:hover{text-decoration:none}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#4a7dff}
+  .btn-ghost{border-color:var(--line);color:var(--txt);background:rgba(255,255,255,.03)}
+  .btn-ghost:hover{border-color:var(--accent)}
+  .badge{display:inline-block;margin-bottom:18px;padding:6px 14px;border-radius:999px;font-size:13px;
+    color:var(--accent2);background:rgba(65,224,176,.1);border:1px solid rgba(65,224,176,.35)}
+  section{padding:64px 0}
+  h2{font-size:clamp(24px,3.5vw,34px);letter-spacing:-.5px;margin-bottom:8px;text-align:center}
+  .lead{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 40px}
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .card h3{font-size:17px;margin-bottom:8px}
+  .card p{font-size:14.5px;color:var(--muted)}
+  .card .ico{font-size:26px;margin-bottom:12px;display:block}
+  .alt{background:var(--bg2)}
+  pre{background:#080d1d;border:1px solid var(--line);border-radius:12px;padding:20px 22px;
+    overflow-x:auto;font-size:13.5px;line-height:1.7;color:#c6d0f5;margin-top:26px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .inline-code{background:rgba(255,255,255,.07);padding:2px 7px;border-radius:6px;font-size:.92em}
+  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:14px;text-align:center}
+  footer a{color:var(--muted)}
+  .compare{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:10px}
+  .compare .card ul{list-style:none;margin-top:10px}
+  .compare .card li{padding:6px 0;border-bottom:1px dashed var(--line);font-size:14.5px;color:var(--muted)}
+  .compare .card li:last-child{border-bottom:none}
+  .yes{color:var(--accent2)} .no{color:#ff7d93}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <div class="brand">Free<span>Desk</span></div>
+    <div class="links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="https://github.com/parmardhruv021-dev/freedesk#readme">Docs</a>
+      <a href="https://github.com/parmardhruv021-dev/freedesk">GitHub</a>
+    </div>
+  </nav>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="badge">Open source · AGPL-3.0 · v0.1.0</div>
+    <h1>Remote desktop that stays <em>yours</em>.<br>No subscriptions. No session limits.</h1>
+    <p class="sub">
+      FreeDesk is a free, self-hosted remote support tool with screen viewing, full remote
+      control, unattended access and file transfer — everything you need, nothing you rent.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/parmardhruv021-dev/freedesk/releases">Download for macOS</a>
+      <a class="btn btn-ghost" href="https://github.com/parmardhruv021-dev/freedesk">View source on GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <h2>Everything you actually use</h2>
+    <p class="lead">The full remote-desktop toolkit, without the paywall in front of it.</p>
+    <div class="grid">
+      <div class="card"><span class="ico">🖥️</span><h3>Screen viewing</h3>
+        <p>Hardware-accelerated AV1/VP9 streaming with adaptive quality, up to 30 fps on ordinary hardware.</p></div>
+      <div class="card"><span class="ico">🖱️</span><h3>Remote control</h3>
+        <p>Full keyboard and mouse control, multi-display support, clipboard sync in both directions.</p></div>
+      <div class="card"><span class="ico">🔑</span><h3>Unattended access</h3>
+        <p>Set a permanent password on machines you manage and reach them any time — no one needs to click “Accept”.</p></div>
+      <div class="card"><span class="ico">📦</span><h3>File transfer</h3>
+        <p>Browse the remote filesystem and copy files both directions inside the session.</p></div>
+      <div class="card"><span class="ico">🏠</span><h3>Self-hosted by default</h3>
+        <p>Points at <em>your</em> server out of the box. No third-party servers, no telemetry, no public STUN probes.</p></div>
+      <div class="card"><span class="ico">🔒</span><h3>End-to-end encrypted</h3>
+        <p>NaCl-encrypted sessions with a per-server Ed25519 identity. Your keys, your traffic.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lead">Two small server binaries and one client. Peers find each other, punch a
+      direct path, and relay only when they must.</p>
+    <div class="compare">
+      <div class="card">
+        <h3>Architecture</h3>
+        <ul>
+          <li><span class="inline-code">hbbs</span> — ID / rendezvous server (ports 21115–21116, 21118)</li>
+          <li><span class="inline-code">hbbr</span> — relay server (ports 21117, 21119)</li>
+          <li><span class="inline-code">freedesk</span> — the client for controller &amp; controlled</li>
+          <li>Direct P2P when possible (1&nbsp;ms verified on LAN), relay as fallback</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>FreeDesk vs. paid remote desktop</h3>
+        <ul>
+          <li><span class="yes">✓</span> Unlimited session length &nbsp;·&nbsp; <span class="no">✗</span> per-minute fees</li>
+          <li><span class="yes">✓</span> Unlimited devices &nbsp;·&nbsp; <span class="no">✗</span> per-seat licensing</li>
+          <li><span class="yes">✓</span> Your own server &nbsp;·&nbsp; <span class="no">✗</span> their cloud only</li>
+          <li><span class="yes">✓</span> Source you can audit &nbsp;·&nbsp; <span class="no">✗</span> closed client</li>
+        </ul>
+      </div>
+    </div>
+    <pre><code># run your own stack in three commands
+git clone https://github.com/rustdesk/rustdesk-server &amp;&amp; cd rustdesk-server
+cargo build --release
+./target/release/hbbs -r YOUR.SERVER.IP:21117 &amp; ./target/release/hbbr &amp;</code></pre>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center">
+    <h2>Built to be forked, not fed</h2>
+    <p class="lead">FreeDesk starts where paid tools end: you can read it, change it, ship it,
+      and never send anyone an invoice for a support session.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/parmardhruv021-dev/freedesk">Get the code</a>
+      <a class="btn btn-ghost" href="https://github.com/parmardhruv021-dev/freedesk/releases">Grab the build</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>FreeDesk is open source under AGPL-3.0 · A fork of
+      <a href="https://github.com/rustdesk/rustdesk">RustDesk</a> ·
+      Not affiliated with AnyDesk, TeamViewer, or RustDesk BV.</p>
+    <p style="margin-top:6px">© 2026 FreeDesk contributors</p>
+  </div>
+</footer>
+
+</body>
+</html>

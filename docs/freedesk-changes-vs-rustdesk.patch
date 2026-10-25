@@ -1,0 +1,410 @@
+diff --git a/Cargo.lock b/Cargo.lock
+index c131141..dd9ec97 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -2948,6 +2948,123 @@ dependencies = [
+  "percent-encoding",
+ ]
+ 
++[[package]]
++name = "freedesk"
++version = "1.5.1"
++dependencies = [
++ "android-wakelock",
++ "android_logger",
++ "arboard",
++ "async-process",
++ "async-trait",
++ "base",
++ "bytemuck",
++ "bytes",
++ "cc",
++ "cfg-if 1.0.0",
++ "chrono",
++ "cidr-utils",
++ "clipboard",
++ "clipboard-master",
++ "cocoa 0.24.1",
++ "core-foundation 0.9.4",
++ "core-graphics 0.22.3",
++ "cpal",
++ "crossbeam-queue",
++ "ctrlc",
++ "dasp",
++ "dbus",
++ "dbus-crossroads",
++ "default-net",
++ "dispatch",
++ "docopt",
++ "enigo",
++ "errno",
++ "evdev",
++ "flutter_rust_bridge",
++ "fon",
++ "fontdb",
++ "foreign-types 0.3.2",
++ "fruitbasket",
++ "gtk",
++ "hbb_common",
++ "hex",
++ "hound",
++ "image 0.24.9",
++ "impersonate_system",
++ "include_dir",
++ "jni",
++ "kcp-sys",
++ "keepawake",
++ "lazy_static",
++ "libpulse-binding",
++ "libpulse-simple-binding",
++ "libsamplerate-sys",
++ "libxdo-sys",
++ "mac_address",
++ "magnum-opus",
++ "nix 0.29.0",
++ "num_cpus",
++ "objc",
++ "objc_id",
++ "once_cell",
++ "openssl",
++ "os-version",
++ "parity-tokio-ipc",
++ "percent-encoding",
++ "piet",
++ "piet-coregraphics",
++ "portable-pty",
++ "qrcode-generator",
++ "rdev",
++ "remote_printer",
++ "repng",
++ "reqwest",
++ "ringbuf",
++ "rubato",
++ "rust-pulsectl",
++ "samplerate",
++ "sciter-rs",
++ "scrap",
++ "serde 1.0.228",
++ "serde_derive",
++ "serde_json 1.0.118",
++ "serde_repr",
++ "sha2",
++ "shared_memory",
++ "shutdown_hooks",
++ "softbuffer",
++ "stunclient",
++ "sys-locale",
++ "system_shutdown",
++ "tao",
++ "tauri-winrt-notification",
++ "terminfo",
++ "termios 0.3.3",
++ "tiny-skia",
++ "tokio",
++ "totp-rs",
++ "tray-icon",
++ "ttf-parser",
++ "url",
++ "uuid",
++ "virtual_display",
++ "wallpaper",
++ "wayland-client",
++ "winapi 0.3.9",
++ "windows 0.61.1",
++ "windows-service",
++ "winit",
++ "winreg 0.11.0",
++ "winres",
++ "wol-rs",
++ "x11-clipboard 0.8.1",
++ "x11rb 0.12.0",
++ "xkbcommon-dl",
++ "xxhash-rust",
++ "zstd",
++]
++
+ [[package]]
+ name = "fruitbasket"
+ version = "0.10.0"
+@@ -7073,123 +7190,6 @@ dependencies = [
+  "semver",
+ ]
+ 
+-[[package]]
+-name = "rustdesk"
+-version = "1.5.1"
+-dependencies = [
+- "android-wakelock",
+- "android_logger",
+- "arboard",
+- "async-process",
+- "async-trait",
+- "base",
+- "bytemuck",
+- "bytes",
+- "cc",
+- "cfg-if 1.0.0",
+- "chrono",
+- "cidr-utils",
+- "clipboard",
+- "clipboard-master",
+- "cocoa 0.24.1",
+- "core-foundation 0.9.4",
+- "core-graphics 0.22.3",
+- "cpal",
+- "crossbeam-queue",
+- "ctrlc",
+- "dasp",
+- "dbus",
+- "dbus-crossroads",
+- "default-net",
+- "dispatch",
+- "docopt",
+- "enigo",
+- "errno",
+- "evdev",
+- "flutter_rust_bridge",
+- "fon",
+- "fontdb",
+- "foreign-types 0.3.2",
+- "fruitbasket",
+- "gtk",
+- "hbb_common",
+- "hex",
+- "hound",
+- "image 0.24.9",
+- "impersonate_system",
+- "include_dir",
+- "jni",
+- "kcp-sys",
+- "keepawake",
+- "lazy_static",
+- "libpulse-binding",
+- "libpulse-simple-binding",
+- "libsamplerate-sys",
+- "libxdo-sys",
+- "mac_address",
+- "magnum-opus",
+- "nix 0.29.0",
+- "num_cpus",
+- "objc",
+- "objc_id",
+- "once_cell",
+- "openssl",
+- "os-version",
+- "parity-tokio-ipc",
+- "percent-encoding",
+- "piet",
+- "piet-coregraphics",
+- "portable-pty",
+- "qrcode-generator",
+- "rdev",
+- "remote_printer",
+- "repng",
+- "reqwest",
+- "ringbuf",
+- "rubato",
+- "rust-pulsectl",
+- "samplerate",
+- "sciter-rs",
+- "scrap",
+- "serde 1.0.228",
+- "serde_derive",
+- "serde_json 1.0.118",
+- "serde_repr",
+- "sha2",
+- "shared_memory",
+- "shutdown_hooks",
+- "softbuffer",
+- "stunclient",
+- "sys-locale",
+- "system_shutdown",
+- "tao",
+- "tauri-winrt-notification",
+- "terminfo",
+- "termios 0.3.3",
+- "tiny-skia",
+- "tokio",
+- "totp-rs",
+- "tray-icon",
+- "ttf-parser",
+- "url",
+- "uuid",
+- "virtual_display",
+- "wallpaper",
+- "wayland-client",
+- "winapi 0.3.9",
+- "windows 0.61.1",
+- "windows-service",
+- "winit",
+- "winreg 0.11.0",
+- "winres",
+- "wol-rs",
+- "x11-clipboard 0.8.1",
+- "x11rb 0.12.0",
+- "xkbcommon-dl",
+- "xxhash-rust",
+- "zstd",
+-]
+-
+ [[package]]
+ name = "rustdesk-portable-packer"
+ version = "1.5.1"
+diff --git a/Cargo.toml b/Cargo.toml
+index 1002586..d9038ed 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -1,11 +1,11 @@
+ [package]
+-name = "rustdesk"
++name = "freedesk"
+ version = "1.5.1"
+-authors = ["rustdesk <info@rustdesk.com>"]
++authors = ["FreeDesk contributors"]
+ edition = "2021"
+ build= "build.rs"
+-description = "RustDesk Remote Desktop"
+-default-run = "rustdesk"
++description = "FreeDesk Remote Desktop"
++default-run = "freedesk"
+ rust-version = "1.75"
+ 
+ [lib]
+@@ -276,8 +276,8 @@ docopt = "1.1"
+ tokio = "1.44"
+ 
+ [package.metadata.bundle]
+-name = "RustDesk"
+-identifier = "com.carriez.rustdesk"
++name = "FreeDesk"
++identifier = "com.freedesk.freedesk"
+ icon = ["res/32x32.png", "res/128x128.png", "res/128x128@2x.png"]
+ osx_minimum_system_version = "10.14"
+ 
+diff --git a/libs/hbb_common b/libs/hbb_common
+--- a/libs/hbb_common
++++ b/libs/hbb_common
+@@ -1 +1 @@
+-Subproject commit edefa08b798b7fbf70b274a4cdbf701c9e06f7a3
++Subproject commit edefa08b798b7fbf70b274a4cdbf701c9e06f7a3-dirty
+diff --git a/src/auth_2fa.rs b/src/auth_2fa.rs
+index 1c243bc..f71747f 100644
+--- a/src/auth_2fa.rs
++++ b/src/auth_2fa.rs
+@@ -14,7 +14,7 @@ lazy_static::lazy_static! {
+     static ref CURRENT_2FA: Mutex<Option<(TOTPInfo, TOTP)>> = Mutex::new(None);
+ }
+ 
+-const ISSUER: &str = "RustDesk";
++const ISSUER: &str = "FreeDesk";
+ const TAG_LOGIN: &str = "Connection";
+ 
+ #[derive(Debug, Clone, Default, Serialize, Deserialize)]
+diff --git a/src/common.rs b/src/common.rs
+index d00d94a..205886b 100644
+--- a/src/common.rs
++++ b/src/common.rs
+@@ -1261,7 +1261,8 @@ fn get_api_server_(api: String, custom: String) -> String {
+             return format!("http://{}", s);
+         }
+     }
+-    "https://admin.rustdesk.com".to_owned()
++    // FreeDesk: no upstream console fallback; callers get an empty string.
++    String::new()
+ }
+ 
+ #[inline]
+@@ -2821,6 +2822,11 @@ pub async fn test_ipv6() -> Option<tokio::task::JoinHandle<()>> {
+             .into_iter()
+             .map(|stun| stun_ipv6_test(stun).boxed())
+             .collect::<Vec<_>>();
++        if tests.is_empty() {
++            // FreeDesk ships with no public STUN servers; select_ok([]) would panic anyway.
++            log::debug!("No STUN servers configured, skipping public IPv6 discovery");
++            return;
++        }
+ 
+         match hbb_common::timeout(STUN_IPV6_TIMEOUT_MS, select_ok(tests)).await {
+             Ok(Ok(res)) => {
+diff --git a/src/ui.rs b/src/ui.rs
+index c95a8ec..98faf79 100644
+--- a/src/ui.rs
++++ b/src/ui.rs
+@@ -178,9 +178,15 @@ pub fn start(args: &mut [String]) {
+     #[cfg(not(feature = "inline"))]
+     frame.load_file(&format!(
+         "file://{}/src/ui/{}",
+-        std::env::current_dir()
+-            .map(|c| c.display().to_string())
+-            .unwrap_or("".to_owned()),
++        // FreeDesk: resolve against the executable directory first so a Finder-launched
++        // .app bundle finds its Resources even when the cwd is "/". Falls back to the
++        // cwd for development runs launched from a different directory.
++        std::env::current_exe()
++            .ok()
++            .and_then(|exe| exe.parent().map(|d| d.to_path_buf()))
++            .or_else(|| std::env::current_dir().ok())
++            .map(|d| d.display().to_string())
++            .unwrap_or_default(),
+         page
+     ));
+     let hide_cm = *cm::HIDE_CM.lock().unwrap();
+diff --git a/src/ui/index.tis b/src/ui/index.tis
+index 5ca96f4..45a42d2 100644
+--- a/src/ui/index.tis
++++ b/src/ui/index.tis
+@@ -93,7 +93,7 @@ class ConnectStatus: Reactor.Component {
+     }
+ 
+     event click $(#setup-server) () {
+-        handler.open_url("https://rustdesk.com/blog/id-relay-set/");
++        handler.open_url("https://freedesk.example/blog/id-relay-set/");
+     }
+ }
+ 
+@@ -601,8 +601,8 @@ class MyIdMenu: Reactor.Component {
+         msgbox("custom-nocancel-nook-hasclose", translate("About") + " " + name, "<div style='line-height: 2em'> \
+             <div>Version: " + handler.get_version() + " \
+             <div>Fingerprint: " + handler.get_fingerprint() + " \
+-            <div .link .custom-event url='https://rustdesk.com/privacy.html'>" + translate("Privacy Statement") + "</div> \
+-            <div .link .custom-event url='https://rustdesk.com'>" + translate("Website") + "</div> \
++            <div .link .custom-event url='https://freedesk.example/privacy.html'>" + translate("Privacy Statement") + "</div> \
++            <div .link .custom-event url='https://freedesk.example'>" + translate("Website") + "</div> \
+ 	    <div style='background: #2c8cff; color: white; padding: 1em; margin-top: 1em;'>Copyright &copy; 2026 Purslane Tech Pte. Ltd.\
+             <br />" + handler.get_license() + " \
+             <p style='font-weight: bold'>" + translate("Slogan_tip") + "</p>\
+@@ -834,10 +834,10 @@ class UpdateMe: Reactor.Component {
+     }
+ 
+     event click $(#install-me) {
+-        handler.open_url("https://rustdesk.com/download");
++        handler.open_url("https://freedesk.example/download");
+         return;
+         if (!is_win) {
+-            handler.open_url("https://rustdesk.com");
++            handler.open_url("https://freedesk.example");
+             return;
+         }
+         var url = software_update_url + '.' + handler.get_software_ext();
+@@ -1343,7 +1343,7 @@ event change $(#msgbox input[name='confirmation']) {
+ $(body).content(<div style="size:*"><App /><div #msgbox /></div>);
+ 
+ event click $(#powered-by) {
+-    handler.open_url("https://rustdesk.com");
++    handler.open_url("https://freedesk.example");
+ }
+ 
+ event click $(#open-settings) (_, me) {
+diff --git a/src/ui/install.tis b/src/ui/install.tis
+index fad4071..9c2b63d 100644
+--- a/src/ui/install.tis
++++ b/src/ui/install.tis
+@@ -50,7 +50,7 @@ class Install: Reactor.Component {
+     }
+ 
+     event click $(#agreement) {
+-        view.open_url("http://rustdesk.com/privacy");
++        view.open_url("https://freedesk.example/privacy");
+     }
+ 
+     event click $(#submit) {
